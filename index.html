@@ -106,16 +106,33 @@
             map.setTerrain({ 'source': 'gsidem-terrain-rgb', 'exaggeration': 1 });
             */
 
-            map.addSource('imageSource', {
+            // オルソ画像ソース
+            map.addSource('ortho', {
                 type: 'raster',
                 url: 'cog://https://xs489works.xsrv.jp/cog-data/VIRTUAL_SHIZUOKA/lp_orthophoto/lp_orthophoto_add_srs_cog.tif',
                 attribution: '<a href="https://www.geospatial.jp/ckan/dataset/shizuoka-2019-pointcloud" target="_blank">VIRTUAL SHIZUOKA</a>',
                 tileSize: 256
             });
 
+            // オルソ画像レイヤ
             map.addLayer({
-                id: 'imageLayer',
-                source: 'imageSource',
+                id: 'ortho',
+                source: 'ortho',
+                type: 'raster'
+            });
+
+            // CS立体図ソース
+            map.addSource('csmap', {
+                type: 'raster',
+                url: 'cog://https://shiworks.xsrv.jp/cog/open-nagasaki/FD251-3857-CSMAP-COG.tif',
+                attribution: '<a href="https://opennagasaki.nerc.or.jp/" target="_blank">オープンナガサキ</a>',
+                tileSize: 256
+            });
+
+            // CS立体図レイヤ
+            map.addLayer({
+                id: 'csmap',
+                source: 'csmap',
                 type: 'raster'
             });
 
