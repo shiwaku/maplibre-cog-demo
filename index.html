@@ -95,7 +95,7 @@
             map.addSource("gsidem-terrain-rgb", {
                 type: 'raster-dem',
                 tiles: [
-                    'https://xs489works.xsrv.jp/raster-tiles/gsi/gsi-dem-terrain-rgb/{z}/{x}/{y}.png',
+                    'https://shi-works.com/raster-tiles/gsi/gsi-dem-terrain-rgb/{z}/{x}/{y}.png',
                 ],
                 attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html#dem" target="_blank">地理院タイル(標高タイル)</a>',
                 tileSize: 256
@@ -109,7 +109,7 @@
             // オルソ画像ソース
             map.addSource('ortho', {
                 type: 'raster',
-                url: 'cog://https://xs489works.xsrv.jp/cog-data/VIRTUAL_SHIZUOKA/lp_orthophoto/lp_orthophoto_add_srs_cog.tif',
+                url: 'cog://https://shi-works.com/cog/VIRTUAL_SHIZUOKA/lp_orthophoto/lp_orthophoto_add_srs_cog.tif',
                 attribution: '<a href="https://www.geospatial.jp/ckan/dataset/shizuoka-2019-pointcloud" target="_blank">VIRTUAL SHIZUOKA</a>',
                 tileSize: 256
             });
@@ -124,7 +124,7 @@
             // CS立体図ソース
             map.addSource('csmap', {
                 type: 'raster',
-                url: 'cog://https://shiworks.xsrv.jp/cog/open-nagasaki/FD251-3857-CSMAP-COG.tif',
+                url: 'cog://https://shi-works.com/cog/open-nagasaki/FD251-3857-CSMAP-COG.tif',
                 attribution: '<a href="https://opennagasaki.nerc.or.jp/" target="_blank">オープンナガサキ</a>',
                 tileSize: 256
             });
